@@ -1,0 +1,11 @@
+Команда для создания классов Scaffold-DbContext {Тут строка подключения к бд} Microsoft.EntityFrameworkCore.SqlServer
+Строка подключения Data Source=DESKTOP-V3UDE6A;Integrated Security=True;Initial Catalog=VideoRental;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False
+В строке подключения поменять Data Source. После равно должно быть имя ТВОЕГО локального сервера
+
+В моём случае команда выглядит так: Scaffold-DbContext "Data Source=DESKTOP-V3UDE6A;Integrated Security=True;Initial Catalog=VideoRental;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False" Microsoft.EntityFrameworkCore.SqlServer
+
+
+
+Так теперь конкретно чё надо сделать
+1) Установить пакеты entity framework core, entity framework tools, entity framework sqlserver через nuget
+2) В классе VideoRentalContext в 31 строке поменять на свою строку подключения
