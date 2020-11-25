@@ -1,0 +1,80 @@
+﻿@model List<WebApp.Models.DiscViewModel>
+@{
+    ViewBag.Title = "Таблица дисков";
+}
+
+@ViewBag.Title
+:
+<div>
+    <table border="1">
+        <thead>
+            <tr>
+                <td>
+                    Id
+                </td>
+                <td>
+                    Название фильма
+                </td>
+                <td>
+                    Дата создания
+                </td>
+                <td>
+                    Студия
+                </td>
+                <td>
+                    Страна
+                </td>
+                <td>
+                    Главный актер
+                </td>
+                <td>
+                    Дата записи
+                </td>
+                <td>
+                    Наименование жанра
+                </td>
+                <td>
+                    Тип диска
+                </td>
+                <td>
+                    Цена
+                </td>
+            </tr>
+        </thead>
+        @foreach (var elem in Model)
+        {
+            <tr>
+                <td>
+                    @elem.Id
+                </td>
+                <td>
+                    @elem.Name
+                </td>
+                <td>
+                    @elem.DateOfCreation
+                </td>
+                <td>
+                    @elem.Creater
+                </td>
+                <td>
+                    @elem.Country
+                </td>
+                <td>
+                    @elem.MainActor
+                </td>
+                <td>
+                    @elem.DateOfRecord
+                </td>
+                <td>
+                    @elem.GenreName
+                </td>
+                <td>
+                    @elem.TypeOfDisc
+                </td>
+                <td>
+                    @elem.Price
+                </td>
+            </tr>
+        }
+    </table>
+</div>
